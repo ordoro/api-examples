@@ -1,4 +1,4 @@
-This repo contains example scripts for using the Ordoro API. Check out [the complete API documentation](http://docs.ordoro.apiary.io/) for more information.
+This repo contains example scripts for using the Ordoro API. Check out [the complete API documentation](http://docs.ordoro.apiary.io/) for more information. There's also [a ruby gem](https://github.com/geminimvp/ordoro-ruby) available.
 
 ***
 
