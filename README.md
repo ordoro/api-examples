@@ -24,7 +24,7 @@ JSON in, JSON out
 ### Getting new orders
 
 ```sh
-curl --user 'myusername:mypassword' --header 'Content-Type: application/json' https://api.ordoro.com/order?status=awaiting_fulfillment
+curl --user 'myusername:mypassword' --header 'Content-Type: application/json' https://api.ordoro.com/v3/order?status=awaiting_fulfillment
 ```
 
 ### Getting products
