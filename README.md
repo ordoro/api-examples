@@ -30,7 +30,7 @@ curl --user 'myusername:mypassword' --header 'Content-Type: application/json' ht
 ### Getting products
 
 ```sh
-curl --user 'myusername:mypassword' https://api.ordoro.com/product/?status=active
+curl --user 'myusername:mypassword' https://api.ordoro.com/product/?active=true
 ```
 
 ### Setting product inventory
