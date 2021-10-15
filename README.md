@@ -1,8 +1,5 @@
 This repo contains example scripts for using the Ordoro API.
-- Check out [the complete API documentation](http://docs.ordoro.apiary.io/) for more information.
-- And the [v3 Orders API](https://devapiverson.docs.apiary.io) for any order related actions.
-
-__NOTE__ Orders will use a different version of the API, but all other actions will use the base API and documentation.
+- Check out [the complete API documentation](http://docs.ordoro.com/) for more information.
 
 ***
 
