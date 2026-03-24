@@ -1,15 +1,15 @@
 <?php
 $ch = curl_init();
 
-// # Use your ordoro username/password here
-$username = 'johnnyuser@yoursite.com';
-$password = 'supersecret';
+# Use your Ordoro API Key client_id/client_secret here
+$client_id = 'your-client-id';
+$client_secret = 'your-client-secret';
 
-$url = 'https://api.ordoro.com/order/M-1234/process/';
+# For more information on process_dropshipments, check the docs https://docs.ordoro.com/#tag/Order/operation/OrderProcessDropshipmentsByOrderNumber_POST
+$url = 'https://api.ordoro.com/order/v3/M-1234/process_dropshipments';
 $data = array();
-
 curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_USERPWD, $username . ':' . $password);
+curl_setopt($ch, CURLOPT_USERPWD, $client_id . ':' . $client_secret);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('content-type: application/json'));
 curl_setopt($ch, CURLOPT_POST, TRUE);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
