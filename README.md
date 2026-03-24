@@ -22,13 +22,13 @@ JSON in, JSON out
 ### Getting new orders
 
 ```sh
-curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' https://api.ordoro.com/v3/order?status=awaiting_fulfillment
+curl --user 'your-client-id:your-client-secret' --header 'Content-Type: application/json' https://api.ordoro.com/v3/order?status=awaiting_fulfillment
 ```
 
 ### Getting products
 
 ```sh
-curl --user 'Client ID:Client Secret' https://api.ordoro.com/product/?active=true
+curl --user 'your-client-id:your-client-secret' https://api.ordoro.com/product/?active=true
 ```
 
 ### Setting product inventory
@@ -39,13 +39,13 @@ __NOTE__ When we import an order, we automatically decrease the available on han
 2. Updating inventory levels regularly based on external feeds (for example, via supplier inventory feeds)
 
 ```sh
-curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' --request PUT --data '{"on_hand":99}' https://api.ordoro.com/product/:sku/warehouse/:warehouse_id/
+curl --user 'your-client-id:your-client-secret' --header 'Content-Type: application/json' --request PUT --data '{"on_hand":99}' https://api.ordoro.com/product/:sku/warehouse/:warehouse_id/
 ```
 
 ### Create order
 
 ```sh
-curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' --request POST https://api.ordoro.com/v3/order --data '{
+curl --user 'your-client-id:your-client-secret' --header 'Content-Type: application/json' --request POST https://api.ordoro.com/v3/order --data '{
   "billing_address": {
     "city": "austin",
     "country": "USA",
@@ -120,13 +120,13 @@ curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' 
 ### Save tracking number
 
 ```sh
-curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' --request POST --data '{"tracking_number": "1234-lkjd", "cost": 7.00, "ship_date": "2016-03-07T06:06:06.123456-06:00", "shipping_method": "rail", "carrier_name": "DHL", "notify_bill_to": false, "notify_ship_to": true, "notify_cart": true}' https://api.ordoro.com/v3/order/:order_number/shipping_info
+curl --user 'your-client-id:your-client-secret' --header 'Content-Type: application/json' --request POST --data '{"tracking_number": "1234-lkjd", "cost": 7.00, "ship_date": "2016-03-07T06:06:06.123456-06:00", "shipping_method": "rail", "carrier_name": "DHL", "notify_bill_to": false, "notify_ship_to": true, "notify_cart": true}' https://api.ordoro.com/v3/order/:order_number/shipping_info
 ```
 
 ### Create product
 
 ```sh
-curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' --request POST --data '{"sku": "unique-sku", "name": "displayme"}' https://api.ordoro.com/product/
+curl --user 'your-client-id:your-client-secret' --header 'Content-Type: application/json' --request POST --data '{"sku": "unique-sku", "name": "displayme"}' https://api.ordoro.com/product/
 ```
 
 ### Get tracking information
@@ -134,5 +134,5 @@ curl --user 'Client ID:Client Secret' --header 'Content-Type: application/json' 
 The tracking information is stored in the shipping_info field of the order.
 
 ```sh
-curl --user 'Client ID:Client Secret' https://api.ordoro.com/v3/order/:order_number
+curl --user 'your-client-id:your-client-secret' https://api.ordoro.com/v3/order/:order_number
 ```
