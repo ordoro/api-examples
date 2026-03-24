@@ -15,7 +15,7 @@ func main() {
 		log.Printf("Error encountered building request: %v", err)
 	}
 
-	req.SetBasicAuth(os.Getenv("ordoro_username"), os.Getenv("ordoro_password"))
+	req.SetBasicAuth(os.Getenv("your_api_key_client_id"), os.Getenv("your_api_key_client_secret"))
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		log.Printf("Error encountered in sending request: %v", err)
